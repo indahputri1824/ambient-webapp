@@ -32,7 +32,7 @@ company = st.text_input('Masukkan nama perusahaan')
 ppc = st.text_input('Masukkan nama petugas pengambil contoh uji')
 
 loc = st.text_input('Masukkan titik/lokasi pengambilan contoh uji ')
-d=st.text_input('Masukkan hari dan tanggal pengambilan contoh uji (hari, dd/mm/yyyy)')
+tanggal=st.text_input('Masukkan hari dan tanggal pengambilan contoh uji (hari, dd/mm/yyyy)')
 
 import datetime
 tstart = st.time_input('Masukkan waktu mulai pengambilan contoh uji', datetime.time())
@@ -210,7 +210,7 @@ if press:
     
         if a<230 and b<150 and c<65 and d<150 and e<365:
             st.write('__**BERITA ACARA SAMPLING**__')
-            st.write('Pada hari', d, 'dan pada pukul', tstart, 'hingga', tfinish, 'telah dilakukan pengambilan contoh uji pada :')
+            st.write('Pada hari', tanggal, 'dan pada pukul', tstart, 'hingga', tfinish, 'telah dilakukan pengambilan contoh uji pada :')
             st.write('Nama Perusahaan :',company)
             st.write('Nama PPC :',ppc)
             ()
@@ -218,7 +218,7 @@ if press:
             st.write('Kualitas Udara Ambien pada lokasi',loc,'dinyatakan BAIK')
         else:
             st.write('__**BERITA ACARA SAMPLING**__')
-            st.write('Pada hari', d, 'dan pada pukul', tstart, 'hingga', tfinish, 'telah dilakukan pengambilan contoh uji pada :')
+            st.write('Pada hari', tanggal, 'dan pada pukul', tstart, 'hingga', tfinish, 'telah dilakukan pengambilan contoh uji pada :')
             st.write('Nama Perusahaan :',company)
             st.write('Nama PPC :',ppc)
             ()
@@ -254,7 +254,7 @@ if press:
     
         if f<230 and g<150 and h<65 and i<150 and j<365 and k<235:
             st.write('__**BERITA ACARA SAMPLING**__')
-            st.write('Pada hari', d, 'dan pada pukul', tstart, 'hingga', tfinish, 'telah dilakukan pengambilan contoh uji pada :')
+            st.write('Pada hari', tanggal, 'dan pada pukul', tstart, 'hingga', tfinish, 'telah dilakukan pengambilan contoh uji pada :')
             st.write('Nama Perusahaan :',company)
             st.write('Nama PPC :',ppc)
             ()
@@ -262,7 +262,7 @@ if press:
             st.write('Kualitas Udara Ambien pada lokasi',loc,'dinyatakan BAIK')
         else:
             st.write('__**BERITA ACARA SAMPLING**__')
-            st.write('Pada hari', d, 'dan pada pukul', tstart, 'hingga', tfinish, 'telah dilakukan pengambilan contoh uji pada :')
+            st.write('Pada hari', tanggal, 'dan pada pukul', tstart, 'hingga', tfinish, 'telah dilakukan pengambilan contoh uji pada :')
             st.write('Nama Perusahaan :',company)
             st.write('Nama PPC :',ppc)
             ()
