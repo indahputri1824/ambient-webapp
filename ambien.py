@@ -4,8 +4,24 @@ st.set_page_config(page_title="SmartAmbient", page_icon=":cloud:", layout="wide"
 
 st.subheader('Hi, I am Smart Ambient :cloud: :wave:')
 st.title('__**APLIKASI PENENTUAN KUALITAS UDARA AMBIEN**__')
-st.write('Sebuah aplikasi yang dibuat untuk memudahkan pengguna agar dapat menentukan kualitas __**udara ambien**__ di suatu daerah dengan mudah. Aplikasi mengacu pada __**Peraturan Pemerintah Republik Indonesia No.41 Tahun 1999 tentang Pengendalian Pencemaran Udara**__.')
-st.write("[Learn more >](https://drive.google.com/file/d/1APHCbTCCitBioA48q_a2a2aVE-PCa-Tu/view?usp=drivesdk)")
+
+
+st.write("---")
+left_column, middle_column, right_column= st.columns(3)
+with left_column:
+    st.write('__**INTRO**__ - Sebuah aplikasi yang dibuat untuk memudahkan pengguna agar dapat menentukan kualitas __**udara ambien**__ di suatu daerah dengan mudah.') 
+with middle_column:
+    st.write('''Aplikasi ini dibuat dan dikembangkan oleh Kelompok 2 LPK, Kelas Akselerasi 2022:
+1. Aisyatul Fajriyani (2240190)
+2. Fadhil Ahmad Fahrezi (2240193)
+3. Lucky Ramadhan (2240197)
+4. Putri Indah Nuraini (2240206)
+5. Stevie Evan Hardiyanto (2240213)
+''')
+
+with right_column:
+    st.write('Aplikasi ini mengacu pada __**Peraturan Pemerintah Republik Indonesia No.41 Tahun 1999 tentang Pengendalian Pencemaran Udara**__.')
+    st.write("[Click here to view >](https://drive.google.com/file/d/1APHCbTCCitBioA48q_a2a2aVE-PCa-Tu/view?usp=drivesdk)")
 
 st.write("---")
 
@@ -61,8 +77,8 @@ Pax=st.number_input('Masukkan tekanan aktual (hpa) [AGIS] :')
 Tax=st.number_input('Masukkan suhu udara / temperatur aktual (derajat celcius) [AGIS] :')  
     
 st.write("---")
-tombol=st.button('TAMPILKAN HASIL ANALISIS [AGIS 24 jam]')
-pencet=st.button('TAMPILKAN HASIL ANALISIS [AGIS 1 jam]')
+tombol=st.button('TAMPILKAN HASIL ANALISIS [HVAS & AGIS 24 jam]')
+pencet=st.button('TAMPILKAN HASIL ANALISIS [HVAS & AGIS 1 jam]')
 press=st.button('TAMPILKAN KESIMPULAN')
 
 if tombol:
@@ -253,7 +269,24 @@ if press:
             st.write('Dan diperoleh Hasil :')
             st.write('Kualitas Udara Ambien pada lokasi',loc,'dinyatakan BURUK')
 
-
+st.write("---")
+st.header("Let Us Know!")
+st.caption("saran dan pengembangan apa yang kalian inginkan dari aplikasi ini,:point_down:")
+st.write('##')
+contact_form=('''
+<form action="https://formsubmit.co/putriindah18004@gmail.com" method="POST">
+     <input type="hidden" name="_captcha" value="false">
+     <input type="text" name="name" placeholder="Your name" required>
+     <input type="email" name="email" placeholder="Your email" required>
+     <textarea name="message" placeholder="your message here" required></textarea>
+     <button type="submit">Send</button>
+</form>
+''')
+left_column, right_column= st.columns(2)
+with left_column:
+    st.markdown(contact_form, unsafe_allow_html=True)
+with right_column:
+    st.empty()
        
     
 
